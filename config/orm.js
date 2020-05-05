@@ -10,20 +10,20 @@ var orm = {
             callback(result);
         });
     },
-    insertOne: function (tableInput, column, value, callback) {
-        var queryString = `INSERT INTO ${tableInput} ${column} VALUES (${value})`;
+    insertOne: function (tableInput, columns, values, callback) {
+        var queryString = `INSERT INTO ${tableInput} ${columns} VALUES (${values})`;
         console.log(queryString);
-        connection.query(queryString, column, value, function (err, result) {
+        connection.query(queryString, columns, values, function (err, result) {
             if (err) {
                 throw err;
             }
             callback(result);
         });
     },
-    updateOne: function (tableInput, column, value, condition, callback) {
+    updateOne: function (tableInput, columns, values, condition, callback) {
         var queryString = `UPDATE ${tableInput} SET ${column} = ${value} WHERE ${condition}`;
         console.log(queryString);
-        connection.query(queryString, column, value, condition, function (err, result) {
+        connection.query(queryString, columns, values, condition, function (err, result) {
             if (err) {
                 throw err;
             }
