@@ -20,10 +20,9 @@ router.get("/", (req, res) => {
     //now need to res.render this list to the template
 })
 //"callback must be a function when provided" error
-router.post("/api/burgers", function(req, res) {
+router.post("/api/burgers", (req, res) => {
     console.log(req.body.name)
-    burger.insertOne(req.body.name, function(result) {
-        // Send back the ID of the new quote
+    burger.insertOne(req.body.name, (result) => {
         console.log(result);
         res.redirect("/")
     });
