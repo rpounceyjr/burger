@@ -11,15 +11,12 @@ var burger = {
             callback(res);
         });
     },
-    insertOne: function (columns, values, callback) {
-        orm.insertOne("burgers", columns, values, function (res) {
-            callback(res);
-        });
+    insertOne: function (values, callback) {
+        orm.insertOne("burgers", "burger_name", values, callback)
     },
-    updateOne: function (columns, values, condition, callback) {
-        orm.updateOne("burgers", columns, values, condition, function (res) {
-            callback(res);
-        });
+
+    updateOne: function (columns, values, condition) {
+        orm.updateOne("burgers", columns, values, condition, callback)
     }
 };
 

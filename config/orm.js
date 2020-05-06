@@ -11,9 +11,9 @@ var orm = {
         });
     },
     insertOne: function (tableInput, columns, values, callback) {
-        var queryString = `INSERT INTO ${tableInput} ${columns} VALUES (${values})`;
+        var queryString = `INSERT INTO ${tableInput} (${columns}) VALUES ('${values}')`;
         console.log(queryString);
-        connection.query(queryString, columns, values, function (err, result) {
+        connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
