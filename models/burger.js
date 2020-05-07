@@ -15,8 +15,8 @@ var burger = {
         orm.insertOne("burgers", "burger_name", values, callback)
     },
 
-    updateOne: function (columns, values, condition) {
-        orm.updateOne("burgers", columns, values, condition, callback)
+    updateOne: function (values, condition, callback) {
+        orm.updateOne("burgers", "devoured", values, condition, callback)
     }
 };
 

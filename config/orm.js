@@ -21,9 +21,9 @@ var orm = {
         });
     },
     updateOne: function (tableInput, columns, values, condition, callback) {
-        var queryString = `UPDATE ${tableInput} SET ${column} = ${value} WHERE ${condition}`;
+        var queryString = `UPDATE ${tableInput} SET ${columns} = '${values}' WHERE ${condition}`;
         console.log(queryString);
-        connection.query(queryString, columns, values, condition, function (err, result) {
+        connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
