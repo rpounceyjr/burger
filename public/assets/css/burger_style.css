@@ -1,4 +1,7 @@
-h1 {
+li {
+    margin: 5px;
+}
+
+h2 {
     text-align: center;
-    color: blue;
 }
