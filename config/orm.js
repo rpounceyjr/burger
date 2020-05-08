@@ -1,8 +1,8 @@
 const connection = require("./connection");
 
-var orm = {
+const orm = {
     selectAll: function (tableInput, callback) {
-        var queryString = `SELECT * FROM ${tableInput};`;
+        const queryString = `SELECT * FROM ${tableInput};`;
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
@@ -11,7 +11,7 @@ var orm = {
         });
     },
     insertOne: function (tableInput, columns, values, callback) {
-        var queryString = `INSERT INTO ${tableInput} (${columns}) VALUES ('${values}')`;
+        const queryString = `INSERT INTO ${tableInput} (${columns}) VALUES ('${values}')`;
         console.log(queryString);
         connection.query(queryString, function (err, result) {
             if (err) {
@@ -21,7 +21,7 @@ var orm = {
         });
     },
     updateOne: function (tableInput, columns, values, condition, callback) {
-        var queryString = `UPDATE ${tableInput} SET ${columns} = '${values}' WHERE ${condition}`;
+        const queryString = `UPDATE ${tableInput} SET ${columns} = '${values}' WHERE ${condition}`;
         console.log(queryString);
         connection.query(queryString, function (err, result) {
             if (err) {
