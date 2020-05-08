@@ -1,5 +1,5 @@
-CREATE DATABASE burgers_db;
-USE burgers_db;
+-- CREATE DATABASE burgers_db;
+USE jvjifdv46e4d62ee;
 
 CREATE TABLE burgers
 (
@@ -8,3 +8,7 @@ CREATE TABLE burgers
 	devoured BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
+
+
+
+
