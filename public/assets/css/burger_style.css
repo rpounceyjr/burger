@@ -64,6 +64,7 @@ li {
 footer{
     border-top: 5px solid black;
     background-color: white;
+    position:sticky;
 }
 @media only screen and (max-width: 500px) {
     body{
@@ -79,5 +80,5 @@ footer{
     .add-burger-section{
         border: 0;
     }
-  }
+}
   
