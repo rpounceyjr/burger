@@ -8,7 +8,7 @@ const mysql = require("mysql");
 //     password: "",
 //     database: "burgers_db"
 // });
-const connection;
+let connection;
 
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
