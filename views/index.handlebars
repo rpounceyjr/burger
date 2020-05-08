@@ -1,5 +1,5 @@
 <div class="jumbotron jumbotron-fluid">
-    <div class="container  text-center">
+    <div class="container  text-left text-bottom">
         <h1 class="display-4">Burger Time!</h1>
         <p class="lead">Let's eat some burgers!</p>
     </div>
@@ -7,34 +7,36 @@
 <hr>
 <div class="container">
     <div class="row">
-        <section class="undevoured-burgers col-md-4">
+        <section class="undevoured-burgers col-12 col-md-4">
             <h2>Burgers to eat:</h2>
 
-            <ul>
+            <ul class="undevoured-burgers-list">
                 {{#each burgers}}
                 {{#unless devoured}}
                 {{> burgers/burger-block devoured=0}}
                 {{/unless}}
                 {{/each}}
             </ul>
+            <div class= "bun-bottom undevoured-burgers-bottom"></div>
         </section>
 
-        <section class="add-burger-section col-md-4 text-center">
+        <section class="add-burger-section col-12 col-md-4 text-center">
             <h2>Add a Burger</h2>
             <form class="create-form">
 
-                <div class="form-group">
-                    <label for="burger-add">Burger:</label>
-                    <input type="text" id="burger-add" name="name">
+                <div class="form-group burger-add-div">
+                    {{!-- <label for="burger-add">Burger:</label> --}}
+                    <input type="text" id="burger-add-input" name="name">
                 </div>
 
                 <button type="submit">Add Burger</button>
             </form>
+            <div class= "bun-bottom add-burger-bottom"></div>
         </section>
 
-        <section class="devoured-burgers col-md-4">
-            <h2>Burgers we've devoured:</h2>
-            <ul>
+        <section class="devoured-burgers col-12 col-md-4">
+            <h2>Burgers eaten:</h2>
+            <ul class="devoured-burgers-list">
                 {{#each burgers}}
                 {{#if devoured}}
                 <li>
@@ -43,6 +45,14 @@
                 {{/if}}
                 {{/each}}
             </ul>
+            <div class= "bun-bottom devoured-burgers-bottom">
+
+            </div>
         </section>
     </div>
 </div>
+ <footer>
+        <div class="footer-copyright text-center py-3">Roger Pouncey 2020:
+    <a href="https://github.com/rpounceyjr"> GitHub</a>
+  </div>
+    </footer>
