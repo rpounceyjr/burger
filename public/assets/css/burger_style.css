@@ -1,7 +1,16 @@
 li {
     margin: 5px;
 }
-
 h2 {
-    text-align: center;
+    text-decoration: underline;
 }
+@media screen and (max-width: 500px) {
+    .container {
+        text-align: center;
+    }
+    section{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  }
+  
