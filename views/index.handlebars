@@ -1,7 +1,13 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container  text-left text-bottom">
-        <h1 class="display-4">Burger Time!</h1>
-        <p class="lead">Let's eat some burgers!</p>
+        <container class="jumbotron-burger">
+            <div class="burger-time-bun burger-time-top"></div>
+            <div class="burger-time-div">
+                <h1 class="display-4">Burger Time!</h1>
+            </div>
+            <div class="burger-time-bun burger-time-bottom"></div>
+            <p class="lead" style= "color:black">Let's eat some burgers!</p>
+        </container>
     </div>
 </div>
 <hr>
@@ -17,7 +23,7 @@
                 {{/unless}}
                 {{/each}}
             </ul>
-            <div class= "bun-bottom undevoured-burgers-bottom"></div>
+            <div class="bun-bottom undevoured-burgers-bottom"></div>
         </section>
 
         <section class="add-burger-section col-12 col-md-4 text-center">
@@ -31,7 +37,7 @@
 
                 <button type="submit">Add Burger</button>
             </form>
-            <div class= "bun-bottom add-burger-bottom"></div>
+            <div class="bun-bottom add-burger-bottom"></div>
         </section>
 
         <section class="devoured-burgers col-12 col-md-4">
@@ -45,14 +51,14 @@
                 {{/if}}
                 {{/each}}
             </ul>
-            <div class= "bun-bottom devoured-burgers-bottom">
+            <div class="bun-bottom devoured-burgers-bottom">
 
             </div>
         </section>
     </div>
 </div>
- <footer>
-        <div class="footer-copyright text-center py-3">Roger Pouncey 2020:
-    <a href="https://github.com/rpounceyjr"> GitHub</a>
-  </div>
-    </footer>
+<footer>
+    <div class="footer-copyright text-center py-3">Roger Pouncey 2020:
+        <a href="https://github.com/rpounceyjr"> GitHub</a>
+    </div>
+</footer>
