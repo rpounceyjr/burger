@@ -9,6 +9,7 @@ router.get("/", (req, res) => {
         const burgersData = {
             burgers: data
         };
+        console.log(data);
         //renders the burgersData retrieved from the database to index.handelbars
         res.render("index", burgersData)
     })
@@ -25,7 +26,7 @@ router.post("/api/burgers", (req, res) => {
     });
 });
 
-//this updates "devoured" from false to true
+//this updates "devoured" from false
 router.put("/api/burgers/:id", (req, res) => {
     const condition = "id = " + req.params.id;
   
