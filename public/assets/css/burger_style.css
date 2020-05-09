@@ -2,6 +2,9 @@ body {
     font-family: 'Mali', cursive;
     background-image: url("https://previews.123rf.com/images/dates249/dates2491808/dates249180800056/107382051-pattern-burger-line-vector.jpg");
 }
+.container {
+    position: relative;
+}
 
 .jumbotron {
     background-image: url("https://movies.mxdwn.com/wp-content/uploads/2019/11/seriesDetail_s10.jpg");
@@ -92,11 +95,7 @@ li {
     background-position: 0 0, 22.5px 22.5px;
     background-size: 18px 15px;
 }
-footer{
-    border-top: 5px solid black;
-    background-color: white;
-    position:sticky;
-}
+
 @media only screen and (max-width: 500px) {
     body{
         text-align: center;
@@ -109,7 +108,15 @@ footer{
         margin-bottom: 10px;
     }
     .add-burger-section{
-        border: 0;
+        border-left: 0;
+        border-right: 0;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .undevoured-burgers-list {
+        text-align: center;
     }
 }
   
