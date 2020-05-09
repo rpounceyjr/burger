@@ -1,5 +1,6 @@
 const express = require("express");
 const burger = require("../models/burger");
+
 const router = express();
 
 //this is the backend to get all burger names and
@@ -9,30 +10,27 @@ router.get("/", (req, res) => {
         const burgersData = {
             burgers: data
         };
-        console.log(data);
-        //renders the burgersData retrieved from the database to index.handelbars
+
+        console.log(burgersData);
         res.render("index", burgersData)
     })
-
 })
-//post a new burger
+
 router.post("/api/burgers", (req, res) => {
     console.log(req.body.name)
-    //passes the burger name from the body to the table
     burger.insertOne(req.body.name, (result) => {
         console.log(result);
-        //reloads the home page
         res.redirect("/")
     });
 });
 
-//this updates "devoured" from false
+
 router.put("/api/burgers/:id", (req, res) => {
     const condition = "id = " + req.params.id;
   
     console.log("condition", condition);
   
-    burger.updateOne(1, condition, (result) => {
+    burger.updateOne(1, condition, function(result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
