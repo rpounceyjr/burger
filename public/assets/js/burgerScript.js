@@ -3,7 +3,7 @@ $(".create-form").on("submit", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newBurger = {
+    const newBurger = {
         name: $("#burger-add").val().trim(),
     };
     console.log("clicked")
@@ -22,7 +22,6 @@ $(".create-form").on("submit", function (event) {
 })
 
 //update a burger 
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
   $(".change-devoured").on("click", function(event) {
     const id = $(this).data("id");

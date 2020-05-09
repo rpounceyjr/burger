@@ -15,7 +15,7 @@
     <div class="row">
         <section class="undevoured-burgers col-12 col-md-4">
             <h2>Burgers to eat:</h2>
-
+        {{!-- pulls from the burger-block partial.  puts burger here if devoured=false --}}
             <ul class="undevoured-burgers-list">
                 {{#each burgers}}
                 {{#unless devoured}}
@@ -31,7 +31,6 @@
             <form class="create-form">
 
                 <div class="form-group burger-add-div">
-                    {{!-- <label for="burger-add">Burger:</label> --}}
                     <input type="text" id="burger-add-input" name="name">
                 </div>
 
@@ -43,6 +42,7 @@
         <section class="devoured-burgers col-12 col-md-4">
             <h2>Burgers eaten:</h2>
             <ul class="devoured-burgers-list">
+                {{!-- burger put here if devoured= true --}}
                 {{#each burgers}}
                 {{#if devoured}}
                 <li>
@@ -57,8 +57,8 @@
         </section>
     </div>
 </div>
-<footer>
-    <div class="footer-copyright text-center py-3 sticky-bottom bg-white border-top">Roger Pouncey 2020:
+    <footer>
+    <div class="footer-copyright text-center py-3 fixed-bottom bg-white border-top">Roger Pouncey 2020:
         <a href="https://github.com/rpounceyjr"> GitHub</a>
     </div>
 </footer>
