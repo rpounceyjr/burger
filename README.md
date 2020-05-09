@@ -1,4 +1,4 @@
-<!-- # Burger Time!
+# Burger Time!
 
 ### **by Roger Pouncey** 
 
@@ -47,4 +47,4 @@ No tests were performed on this app.
 
 ## **Questions** <a name="questions"></a>
 
-Questions about this app can be addressed to Roger Pouncey, either through GitHub or via the above email address. -->
+Questions about this app can be addressed to Roger Pouncey, either through GitHub or via the above email address.
