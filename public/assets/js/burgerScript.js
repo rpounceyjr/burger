@@ -4,7 +4,7 @@ $(".create-form").on("submit", function (event) {
     event.preventDefault();
 
     const newBurger = {
-        name: $("#burger-add").val().trim(),
+        name: $("#burger-add-input").val().trim(),
     };
     console.log("clicked")
     console.log(newBurger);
